@@ -399,7 +399,7 @@ static void aaci_fifo_irq(uint32_t base, int channel, uint32_t mask) {
 
 	if (mask & AACI_ISR_TXINTR) {
 	/*
-	AACITXINTR 1-4 
+	AACITXINTR 1-4
 	If the FIFO is enabled, the FIFO transmit interrupt is asserted
 	when the PrimeCell AACI transmit FIFO is less than, or equal to,
 	half-empty and the mask bit TxIE is set. The FIFO transmit
@@ -491,7 +491,7 @@ int ac97_get_vol(void) {
 int aaci_ac97_init(void) {
 	ac97_reset();
 	/* Set maximum master volume */
-	ac97_set_vol(0x3F);
+	ac97_set_vol(0x0);
 
 	return 0;
 }
